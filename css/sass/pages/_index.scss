@@ -1,0 +1,159 @@
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $orange-darker;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    width: 100%;
+    border: 10px solid $orange-darker;
+    border-top: 0 !important;
+    position: relative;
+    background-color: $orange;
+    flex: 1;
+  }
+
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  &__aside {
+    flex: 0 0 33.33%;
+    position: relative;
+  }
+
+  &__main {
+    flex: 0 0 66.66%;
+    position: relative;
+  }
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media (max-width: 991px) {
+    &__title {
+      padding: 8px 30px;
+      font-size: 16px;
+    }
+
+    &__body {
+      border-width: 0 4px 4px 0;
+    }
+  }
+}
+
+.popup {
+  .modal-content {
+    background-color: $purple;
+  }
+
+  .modal-header {
+    position: relative;
+    z-index: 10;
+    height: 0;
+    padding: 0;
+    border: 0;
+
+    .close {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background: 0;
+      border: 0;
+      color: $white;
+      position: absolute;
+      top: 23px;
+      right: 8px;
+      transform: translateY(-50%);
+    }
+
+    .close--sm {
+      top: 20px;
+    }
+
+    .close--list {
+      top: 52px;
+      right: 4px;
+      font-size: 20px;
+      color: $orange;
+    }
+  }
+
+  .modal-body {
+    padding: 0 !important;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: calc(100% - 40px);
+    }
+
+    .popup-share.modal-dialog {
+      max-width: 500px !important;
+    }
+
+    .popup-share &__frame {
+      height: 200px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .modal-dialog {
+      max-width: 900px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .modal-dialog {
+      max-width: 1030px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .modal-header {
+      .close {
+        top: 20px;
+        right: 4px;
+      }
+
+      .close--list {
+        top: 12px;
+        right: 0;
+      }
+    }
+
+    &__frame {
+      height: calc(100vh - 80px);
+    }
+
+    .popup-share &__frame {
+      height: 200px;
+    }
+  }
+}

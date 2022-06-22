@@ -1,0 +1,69 @@
+.post {
+  &__content {
+    padding: 30px 20px;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: $white;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 3px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar
+    {
+      width: 6px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 3px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: rgba(#fff, 0.85);
+    }
+
+    a,
+    a:hover {
+      color: $white;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @include media-breakpoint-down(xxl) {
+    &__content {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(xl) {
+    &__content {
+      padding: 24px 16px;
+      font-size: 16px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__content {
+      font-size: 14px;
+    }
+  }
+}
