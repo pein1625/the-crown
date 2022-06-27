@@ -23,7 +23,7 @@
 
   &__body {
     width: 100%;
-    border: 10px solid $orange-darker;
+    border: 10px solid rgba($orange-darker, 0.8);
     border-top: 0 !important;
     position: relative;
     background-color: $orange;
