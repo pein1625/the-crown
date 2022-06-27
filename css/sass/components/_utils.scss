@@ -20,8 +20,10 @@
   }
 }
 
-.pagination {
-  margin-bottom: 0;
+.custom-pagination {
+  .pagination {
+    margin-bottom: 0;
+  }
 
   .page-item {
     &:not(:last-child) {
