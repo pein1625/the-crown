@@ -170,3 +170,11 @@ $(function () {
         $el.closest('.layout').find('.layout__iframe').attr('src', url);
     });
 });
+
+$(function () {
+
+    $('.intro__content-close').on('click', function () {
+
+        $('.intro__content').addClass('is-close');
+    });
+});
