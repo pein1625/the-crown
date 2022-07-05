@@ -178,3 +178,8 @@ $(function () {
         $('.intro__content').addClass('is-close');
     });
 });
+
+$(function () {
+
+    $('.popup-auto-show').modal('show');
+});
