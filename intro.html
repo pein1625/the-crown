@@ -14,8 +14,8 @@
         <script src="./js/app.js?v=1.2" defer="defer"></script>
     </head>
     <body>
-        <div class="intro"><img class="intro__bg" src="./images/intro-bg.jpg" alt="">
-            <div class="intro__header"><a class="intro__logo" href="#!"><img src="./images/logo.png" alt=""></a></div>
+        <div class="intro">
+            <div class="intro__header"><a class="intro__logo" href="#!"><img src="./images/logo.png" alt=""></a></div><img class="intro__img" src="./images/intro-bg.jpg" alt=""><img class="intro__img" src="./images/search-page-bg.jpg" alt="">
             <div class="intro__content"><img class="intro__content-bg" src="./images/content-path.png" alt="">
                 <div class="intro__content-header">
                     <button class="intro__content-close" type="button"><img src="./images/button-icon.png" alt=""></button>
@@ -25,6 +25,36 @@
                     <div class="intro__content-desc">
                         <p>Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai</p>
                         <p>Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="n-search" action="#!">
+            <div class="input-group"><span class="input-group-text"><i class="fal fa-fw fa-search"></i></span>
+                <input class="form-control" type="text" placeholder="Tìm kiếm">
+            </div>
+            <div class="n-search__dropdown">
+                <button class="n-search__close" type="button"><img src="./images/button-icon.png" alt=""></button>
+                <div class="subtitle">
+                    <div class="subtitle__title">Subtitle</div>
+                    <div class="subtitle__desc">Vị trí tâm mạch chiến lược của Thành phố phía Đông , nơi sở hữu siêu hạ tầng giao thông kết nối nghìn tỉ của cao tốc Hà Nội - Hải Phòng, nút giao Cổ Linh và các cây cầu, vành đai chiến lược trong tương lai</div>
+                    <div class="subtitle__footer mt-3">
+                        <label class="subtitle__switcher">
+                            <input type="checkbox"><span><img class="subtitle__sun" src="./images/icon-sun.png" alt=""><img class="subtitle__moon" src="./images/icon-moon.png" alt=""></span>
+                        </label>
+                        <div class="subtitle__btns mt-3"><a class="subtitle__btn" href="#!">Tổng mặt bằng</a><a class="subtitle__btn subtitle__btn--white" href="#!">Layout điển hình</a></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="popup popup--list modal fade" id="popup-list" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header"><a class="close close--list" href="./list.html"><i class="fal fa-times"></i></a></div>
+                    <div class="modal-body">
+                        <div class="popup__frame ratio ratio-16x9">
+                            <iframe src="./list.html" frameborder="0"></iframe>
+                        </div>
                     </div>
                 </div>
             </div>

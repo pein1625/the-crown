@@ -183,3 +183,21 @@ $(function () {
 
     $('.popup-auto-show').modal('show');
 });
+
+$(function () {
+
+    $('.n-search__close').on('click', function () {
+
+        $('.n-search__dropdown').addClass('d-none');
+    });
+
+    $('.n-search input.form-control').on('focus', function () {
+
+        $('#popup-list').modal('show');
+    });
+
+    $('.n-search .input-group-text').on('click', function () {
+
+        $('#popup-list').modal('show');
+    });
+});
