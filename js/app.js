@@ -141,13 +141,22 @@ $(function () {
 
     if (!btnElement) return false;
 
+    let timeout = null;
+
     btnElement.addEventListener('click', function () {
+
+        clearTimeout(timeout);
 
         btnElement.innerText = 'Đã sao chép!'; // step 3
 
         ipnElement.select(); // step 4
 
         document.execCommand('copy'); // step 5
+
+        setTimeout(() => {
+
+            btnElement.innerText = 'Sao chép';
+        }, 1000);
     });
 });
 
@@ -199,5 +208,27 @@ $(function () {
     $('.n-search .input-group-text').on('click', function () {
 
         $('#popup-list').modal('show');
+    });
+});
+
+$(function () {
+
+    $('.popup-menu__link').on('click', function (e) {
+
+        const $link = $(this);
+
+        const $submenu = $link.siblings('.popup-menu__sublist');
+
+        if (!$submenu.length) return;
+
+        e.preventDefault();
+
+        $link.toggleClass('active');
+
+        $submenu.slideToggle();
+
+        $link.parent().siblings('.popup-menu__item').find('.popup-menu__link').removeClass('active');
+
+        $link.parent().siblings('.popup-menu__item').find('.popup-menu__sublist').slideUp();
     });
 });

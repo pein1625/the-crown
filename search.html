@@ -8,23 +8,23 @@
         <!-- Styles-->
         <link rel="stylesheet" type="text/css" href="./css/libs.css" />
         <link rel="stylesheet" type="text/css" href="./vendor/fontawesome-pro/css/all.min.css" />
-        <link rel="stylesheet" type="text/css" href="./css/app.css?v=1.5" />
+        <link rel="stylesheet" type="text/css" href="./css/app.css?v=1.6" />
         <!-- Scripts-->
         <script src="./js/libs.js" defer="defer"></script>
-        <script src="./js/app.js?v=1.5" defer="defer"></script>
+        <script src="./js/app.js?v=1.6" defer="defer"></script>
     </head>
     <body>
         <article class="search-page"><img class="search-page__bg" src="./images/search-page-bg.jpg" alt=""></article>
-        <div class="popup popup--list modal fade popup-auto-show" id="popup-list" tabindex="-1">
+        <div class="popup popup-list popup-auto-show modal fade" id="popup-list" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header"><a class="close close--list" href="./list.html"><i class="fal fa-times"></i></a></div>
-                    <div class="modal-body">
+                    <button class="popup__close close" type="button" data-bs-dismiss="modal"><i class="fal fa-times"></i></button>
+                    <div class="modal-body p-0">
                         <div class="popup__frame ratio ratio-16x9">
-                            <div class="list"><img class="list__bg-1" src="./images/layout-bg-1.png" alt=""><img class="list__bg-2" src="./images/layout-bg-2.png" alt="">
+                            <div class="list"><img class="list__bg-1" src="./images/layout-bg-1.png" alt="" /><img class="list__bg-2" src="./images/layout-bg-2.png" alt="" />
                                 <form class="list__search">
                                     <div class="input-group"><span class="input-group-text"><i class="fal fa-search"></i></span>
-                                        <input class="form-control" type="text">
+                                        <input class="form-control" type="text" />
                                         <button class="input-group-text">Tìm kiếm</button>
                                     </div>
                                 </form>
